@@ -13,6 +13,7 @@ def clean_data(df):
     ]
 
     df["Total Charges"] = pd.to_numeric(df["Total Charges"], errors="coerce")
+    df.loc[df["Tenure Months"] == 0, "Total Charges"] = 0
     df.drop(columns=remove_cols, inplace=True)
 
     return df
