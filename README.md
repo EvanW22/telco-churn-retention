@@ -30,13 +30,20 @@ Key Insights:
 
 For these reasons, I decided to use GBM (sklearn) as my final model.
 
+![GBM Precision Recall Curve](images/GBM_PR_curve.png)
+
+![SHAP Beeswarm](images/shap_beeswarm.png)
+
 ## Section 5 - Retention and Business Impact
 After selecting the GBM model, I began the retention simulation with the following assumptions:
-- Retention outreach has a 20% success rate.
 - Retention cost is $50 per targeted customer.
 - Successfully retained customers will stay with the company for 12 months with the same monthly charges they previously had.
 The expected profit formula was:
+$$
 Expected Profit = P(churn) × P(save) × Customer Value − Retention Cost
+$$
 where customer value = monthly charges x 12.
 
-The retention simulation targeted 502 high-risk customers and generated an estimated $28,574.21 in expected profit. This project demonstrates the transition from predictive modeling to profit-driven decision optimization.
+![Profit Curve](images/profit_curve.png)
+
+With a 20% success rate, the retention simulation targeted 502 high-risk customers and generated an estimated \$28,574.21 in expected profit. On the higher-end 30% success rate, we targeted 614 customers with a profit of \$56,714.09. This project demonstrates the transition from predictive modeling to profit-driven decision optimization.
