@@ -1,4 +1,4 @@
-# Telecom Customer Churn and Retention
+# Telecom Customer Churn Prediction and Retention Simulation
 
 ## Section 1 - Project Summary
 Built a customer churn prediction model for a telecommunications dataset and created a retention simulation to maximize profit. The final model achieved a PR-AUC of 0.673 (26.5% churn rate) and generated an estimated $28.7k in expected retention profit from 506 targeted customers.
@@ -32,7 +32,19 @@ For these reasons, I decided to use GBM (sklearn) as my final model.
 
 ![GBM Precision Recall Curve](images/GBM_PR_curve.png)
 
-![SHAP Beeswarm](images/shap_beeswarm.png)
+<table>
+<tr>
+<td align="center">
+<b>Global Feature Importance</b><br>
+<img src="images/shap_bar.png" width="100%">
+</td>
+
+<td align="center">
+<b>Feature Impact Distribution</b><br>
+<img src="images/shap_beeswarm.png" width="100%">
+</td>
+</tr>
+</table>
 
 ## Section 5 - Retention and Business Impact
 After selecting the GBM model, I began the retention simulation with the following assumptions:
@@ -46,4 +58,4 @@ where customer value = monthly charges x 12.
 
 ![Profit Curve](images/profit_curve.png)
 
-With a 20% success rate, the retention simulation targeted 502 high-risk customers and generated an estimated \$28,574.21 in expected profit. On the higher-end 30% success rate, we targeted 614 customers with a profit of \$56,714.09. This project demonstrates the transition from predictive modeling to profit-driven decision optimization.
+With a 20% success rate, the retention simulation targeted 502 high-risk customers and generated an estimated USD 28,574.21 in expected profit. On the higher-end 30% success rate, we targeted 614 customers with a profit of USD 56,714.09. This project demonstrates the transition from predictive modeling to profit-driven decision optimization.
