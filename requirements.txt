@@ -6,3 +6,4 @@ seaborn>=0.12
 xgboost>=1.7
 shap>=0.42
 jupyterlab>=3.6
+lifelines>=0.27
