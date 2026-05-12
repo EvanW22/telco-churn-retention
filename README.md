@@ -84,17 +84,9 @@ This gives us a more accurate profit estimate rather than just using churn risk.
 ## Section 7 - Profit-Optimized Retention Strategy
 Customers are ranked and targeted by expected profit:
 
-$$
-\text{Expected Profit}
-=
-P(\text{churn})
-\times
-P(\text{save})
-\times
-\text{CLV}
--
-\text{Cost}
-$$
+
+Expected Profit = P(churn) × P(save) × CLV − Cost
+
 
 Two intervention tiers were used for the simulation:
 - Upgrade offer (higher cost, higher success rate)
